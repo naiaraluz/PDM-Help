@@ -4,8 +4,7 @@ import 'package:path/path.dart';
 import 'package:projeto_banco/models/categoria.dart';
 import 'package:sqflite/sqflite.dart';
 
-// id name     email              phone    img
-// 1  fabricio fabricio@gmail.com 234555   /images/
+
 final String chamadosTable = "chamadosTable";
 final String idChamado = "idChamado";
 final String tituloChamado = "tituloChamado";
@@ -138,11 +137,7 @@ class Chamado {
 
   Chamado();
 
-  //Construtor - quando formos armazenar em nosso bd, vamos armazenar em
-  //um formato de mapa e para recuperar os dados, precisamos transformar
-  //esse map de volta em nosso contato.
   Chamado.fromMap(Map map) {
-    // nessa função eu pego um map e passo para o meu contato
     id = map[idChamado];
     titulo = map[tituloChamado];
     responsavel = map[responsavelChamado];
@@ -154,7 +149,6 @@ class Chamado {
   }
 
   Map toMap() {
-    // aqui eu pego contato e transformo em um map
     Map<String, dynamic> map = {
       tituloChamado: titulo,
       responsavelChamado: responsavel,
@@ -173,7 +167,6 @@ class Chamado {
 
   @override
   String toString() {
-    //sobrescrita do método para facilitar a visualização dos dados
     return "Chamado(id: $id, titulo: $titulo, responsavel: $responsavel, interacao: $interacao, categoria: $categoria, status: $status, relator: $relator, img: $img )";
   }
 }

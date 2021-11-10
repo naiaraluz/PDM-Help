@@ -23,12 +23,7 @@ class _HomePageState extends State<HomePage> {
   void initState() {
     super.initState();
 
-    /*Chamado c = Chamado();
-    c.name = "Jorge Herpich";
-    c.email = "pedro@gmail.com";
-    c.phone = "0987654321";
-    c.img = "";
-    helper.saveChamado(c);*/
+    
 
     resetarBanco();
 
@@ -65,7 +60,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Chamados"),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.black,
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
@@ -75,7 +70,7 @@ class _HomePageState extends State<HomePage> {
           _showChamadoPage();
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.black,
       ),
       body: ListView.builder(
           padding: EdgeInsets.all(10.0),
